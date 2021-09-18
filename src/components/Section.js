@@ -1,24 +1,29 @@
 import React from 'react'
 import styled from 'styled-components'
+import Fade from 'react-reveal/Fade';
 
 function Section( { title, description, leftBtnText, rightBtnText, backgroundImg, } ) {
   return (
     <Wrap bgImage = {backgroundImg}>
-      <ItemText>
-        <h1>{title}</h1>
-        <p>{description}</p>
-      </ItemText>
+      <Fade bottom>
+        <ItemText>
+          <h1>{title}</h1>
+          <p>{description}</p>
+        </ItemText>
+      </Fade>
       <Buttons>
-        <ButtonGroup>
-          <LeftButton>
-            {leftBtnText}
-          </LeftButton>
-          { rightBtnText && 
-            <RightButton>
-              {rightBtnText}
-            </RightButton>
-          }
-        </ButtonGroup>
+        <Fade bottom>
+          <ButtonGroup>
+            <LeftButton>
+              {leftBtnText}
+            </LeftButton>
+            { rightBtnText && 
+              <RightButton>
+                {rightBtnText}
+              </RightButton>
+            }
+          </ButtonGroup>
+        </Fade>
         <DownArrow src="/images/down-arrow.svg"/>
       </Buttons>
     </Wrap>
@@ -30,14 +35,13 @@ export default Section
 const Wrap = styled.div`
   width: 100vw;
   height: 100vh;
-  // background-image: url('/images/model-s.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; // vertical
-  align-items: center; // horizontal
+  justify-content: space-between; // vertical adjustment
+  align-items: center; // horizontal adjustment
   background-image: ${props => `url("/images/${props.bgImage}")`}
 `
 const ItemText = styled.div`
@@ -75,12 +79,9 @@ const RightButton = styled(LeftButton)`
 `
 
 const DownArrow = styled.img`
-  // cursor: pointer;
   height: 40px;
   animation: animateDown infinite 1.5s;
   overflow-x: hidden;
 `
 
-const Buttons = styled.div`
-
-`
+const Buttons = styled.div``

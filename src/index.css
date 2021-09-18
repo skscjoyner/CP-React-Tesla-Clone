@@ -8,7 +8,11 @@
 
 body {
   width: 100%;
-  overflow-x: hidden;
+  overflow-x: hidden; /* hides horizontal scrollbar*/
+}
+
+a {
+  text-decoration: none;
 }
 
 @keyframes animateDown {

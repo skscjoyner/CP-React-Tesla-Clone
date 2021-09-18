@@ -44,8 +44,8 @@ function Home() {
         title="Solar for New Roofs" 
         description="Solar Roof Costs Less Than a New Roof Plus Solar Panels"
         backgroundImg="solar-roof.jpg"
-        leftBtnText="Custom Order"
-        rightBtnText="Existing Inventory"
+        leftBtnText="Order Now"
+        rightBtnText="Learn More"
       />
       <Section 
         title="Accessories"
