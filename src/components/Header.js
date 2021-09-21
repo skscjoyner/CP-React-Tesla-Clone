@@ -33,11 +33,11 @@ function Header() {
         {cars && cars.map((car, index) => (
           <li key={index}><a href="#">{car}</a></li>
         ))}
-        <li href="#">Existing Inventory</li>
-        <li href="#">Used Inventory</li>
-        <li href="#">Trade-in</li>
-        <li href="#">Cybertruck</li>
-        <li href="#">Roadster</li>
+        <li><a href="#">Existing Inventory</a></li>
+        <li><a href="#">Used Inventory</a></li>
+        <li><a href="#">Trade-in</a></li>
+        <li><a href="#">Cybertruck</a></li>
+        <li><a href="#">Roadster</a></li>
       </BurgerNav>
 
     </Container>
